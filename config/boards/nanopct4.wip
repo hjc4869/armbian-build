@@ -1,0 +1,21 @@
+# NanoPC T4 hexa core 4GB SoC eMMC GBE USB3 WiFi
+BOARD_NAME="NanoPC T4"
+BOARDFAMILY="firefly"
+BOOTCONFIG="nanopi4_defconfig"
+#
+MODULES=""
+MODULES_NEXT=""
+#
+KERNEL_TARGET="default,dev"
+CLI_TARGET=""
+DESKTOP_TARGET=""
+
+CLI_BETA_TARGET="stretch,xenial:default,dev"
+DESKTOP_BETA_TARGET="stretch,xenial:default,dev"
+#
+RECOMMENDED="Ubuntu_xenial_default_desktop_nightly:60,Debian_stretch_default_nightly:60"
+#
+BOARDRATING=""
+HARDWARE=""
+FORUMS="http://forum.armbian.com/index.php/forum/11-other-boards/"
+BUY=""
