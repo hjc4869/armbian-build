@@ -15,7 +15,7 @@ new file mode 100644
 index 000000000000..2dfe14e22c14
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-common.dtsi
-@@ -0,0 +1,1135 @@
+@@ -0,0 +1,1142 @@
 +/*
 + * Copyright (c) 2018 FriendlyElec Computer Tech. Co., Ltd.
 + * (http://www.friendlyarm.com)
@@ -919,9 +919,16 @@ index 000000000000..2dfe14e22c14
 +};
 +
 +&pcie0 {
-+	status = "okay";
-+	ep-gpios = <&gpio2 4 GPIO_ACTIVE_HIGH>;
-+	num-lanes = <4>;
++       assigned-clocks = <&cru SCLK_PCIEPHY_REF>;
++       assigned-clock-parents = <&cru SCLK_PCIEPHY_REF100M>;
++       assigned-clock-rates = <100000000>;
++       status = "okay";
++       ep-gpios = <&gpio2 4 GPIO_ACTIVE_HIGH>;
++       num-lanes = <4>;
++       vpcie3v3-supply = <&vcc3v3_sys>;
++       pinctrl-names = "default";
++       pinctrl-0 = <&pcie_clkreqn_cpm>;
++       max-link-speed = <2>;
 +};
 +
 +&pwm_bl {
