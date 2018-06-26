@@ -1,5 +1,5 @@
 diff --git a/arch/arm64/boot/dts/rockchip/Makefile b/arch/arm64/boot/dts/rockchip/Makefile
-index 778e22a3804f..ccafdf6a7c1e 100644
+index ce0a5a0d..8c2c6d83 100644
 --- a/arch/arm64/boot/dts/rockchip/Makefile
 +++ b/arch/arm64/boot/dts/rockchip/Makefile
 @@ -61,6 +61,7 @@ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-gru-kevin-r0.dtb
@@ -12,10 +12,10 @@ index 778e22a3804f..ccafdf6a7c1e 100644
  dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3399-sapphire-excavator-box-android-6.0.dtb
 diff --git a/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-common.dtsi b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-common.dtsi
 new file mode 100644
-index 000000000000..2dfe14e22c14
+index 00000000..fcd98419
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-common.dtsi
-@@ -0,0 +1,1142 @@
+@@ -0,0 +1,1131 @@
 +/*
 + * Copyright (c) 2018 FriendlyElec Computer Tech. Co., Ltd.
 + * (http://www.friendlyarm.com)
@@ -83,17 +83,6 @@ index 000000000000..2dfe14e22c14
 +		machine = "NANOPI4";
 +		hwrev = <255>;
 +		model = "NanoPi 4 Series";
-+	};
-+
-+	fiq_debugger: fiq-debugger {
-+		compatible = "rockchip,fiq-debugger";
-+		rockchip,serial-id = <2>;
-+		rockchip,signal-irq = <182>;
-+		rockchip,wake-irq = <0>;
-+		rockchip,irq-mode-enable = <1>;  /* If enable uart uses irq instead of fiq */
-+		rockchip,baudrate = <1500000>;  /* Only 115200 and 1500000 */
-+		pinctrl-names = "default";
-+		pinctrl-0 = <&uart2c_xfer>;
 +	};
 +
 +	clkin_gmac: external-gmac-clock {
@@ -1160,7 +1149,7 @@ index 000000000000..2dfe14e22c14
 +};
 diff --git a/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-rev00.dts b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-rev00.dts
 new file mode 100644
-index 000000000000..f1ad210b2b28
+index 00000000..f1ad210b
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-rev00.dts
 @@ -0,0 +1,30 @@
