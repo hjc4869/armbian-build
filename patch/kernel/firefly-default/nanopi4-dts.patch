@@ -15,7 +15,7 @@ new file mode 100644
 index 00000000..fcd98419
 --- /dev/null
 +++ b/arch/arm64/boot/dts/rockchip/rk3399-nanopi4-common.dtsi
-@@ -0,0 +1,1131 @@
+@@ -0,0 +1,1129 @@
 +/*
 + * Copyright (c) 2018 FriendlyElec Computer Tech. Co., Ltd.
 + * (http://www.friendlyarm.com)
@@ -74,8 +74,6 @@ index 00000000..fcd98419
 +
 +	cpuinfo {
 +		compatible = "rockchip,cpuinfo";
-+		nvmem-cells = <&efuse_id>;
-+		nvmem-cell-names = "id";
 +	};
 +
 +	mach: board {
